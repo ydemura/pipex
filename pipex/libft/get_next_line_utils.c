@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   get_next_line_utils.c                              :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: ydemura <ydemura@student.codam.nl>           +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2020/11/21 13:12:36 by ydemura       #+#    #+#                 */
-/*   Updated: 2021/10/01 01:53:19 by ydemura       ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yuliia <yuliia@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/21 13:12:36 by ydemura           #+#    #+#             */
+/*   Updated: 2023/09/05 14:11:00 by yuliia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,8 @@ void	after_n_memcpy(char *left, char *temp, unsigned int n)
 
 char	*ft_realloc(char **line, int new_len, t_memory *memory)
 {
-	int		len;
 	char	*new_line;
 
-	len = ft_strlen(*line);
 	if (!*line)
 	{
 		new_line = malloc((new_len + 1) * sizeof(char));

@@ -11,12 +11,10 @@
 char	**find_possible_pathes(char *env_path_options)
 {
 	char	**possible_pathes;
-	int		i;
 
 	possible_pathes = ft_split(env_path_options, ':');
 	if (possible_pathes == NULL)
 		exit_beautifully("oops, main.c:86", ERR);
-	i = 0;
 	return (possible_pathes);
 }
 
@@ -67,10 +65,8 @@ char	*trim_extra_quotes(char *str)
 void	handle_one_command(char *str, t_cmd *cmds, int i)
 {
 	int		n;
-	char	*second_str;
 
 	n = 0;
-	second_str = NULL;
 	cmds[i].cmd_arr[n] = strdup_till_char(str, ' ');
 	if (cmds[i].cmd_arr[n] == NULL)
 		exit_beautifully("malloc faied\nread_input.c:110", ERR);
